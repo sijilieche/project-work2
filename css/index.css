@@ -1,0 +1,172 @@
+ /* 去除默认样式 */
+ * {
+    padding: 0;
+    margin: 0;
+}
+
+/* 解决横向滚动条问题 */
+body {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 蓝天样式 */
+.sky {
+    width: 100%;
+    height: 60vh;
+    background: rgb(196, 228, 253);
+    background: linear-gradient(to bottom, rgb(196, 228, 253) 0%, #D0E9FD 20%, #E0F1FD 50%, #F4FAFF 70%, #FFFFFF 100%);
+}
+
+/* 草地样式 */
+.grass {
+    width: 100%;
+    height: 40vh;
+    background: rgb(148, 190, 89);
+    background: linear-gradient(to top, rgb(148, 190, 89) 0%, #A6C978 10%, #BDD798 30%, #CADEAC 50%, #DBEAC9 70%, #FFFFFF 100%);
+}
+
+/* 兔子样式 */
+.grass>img {
+    display: block;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: 50px;
+    right: 200px;
+}
+
+/* 统一对云朵进行样式设置 */
+.sky>div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    background: #FFFFFF;
+}
+
+/* 伪元素前 */
+.sky>div::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    left: -30px;
+    top: 25px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    transform: rotate(-26deg);
+}
+
+/* 伪元素后 */
+.sky>div::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    left: -48px;
+    top: 46px;
+    background: #FFFFFF;
+    border-radius: 40px;
+}
+
+/* 第一朵云 */
+.sky>.cloud1 {
+    top: 31px;
+    right: 100px;
+    opacity: .7;
+    animation: cloud1 13s linear infinite;
+}
+
+/* 第一朵云关键帧设置 */
+@keyframes cloud1 {
+    from {
+        left: 90%;
+    }
+
+    to {
+        left: -110%;
+    }
+}
+
+/* 第二朵云 */
+.sky>.cloud2 {
+    top: 214px;
+    right: -19px;
+    opacity: .6;
+    transform: scale(.9);
+    animation: cloud2 12s linear infinite;
+}
+
+/* 第二朵云关键帧设置 */
+@keyframes cloud2 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+/* 第三朵云 */
+.sky>.cloud3 {
+    top: 113px;
+    right: -162px;
+    opacity: .9;
+    transform: scale(1.2);
+    animation: cloud3 10s linear infinite;
+}
+
+/* 第三朵云关键帧设置 */
+@keyframes cloud3 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+/* 第四朵云 */
+.sky>.cloud4 {
+    top: 194px;
+    right: -117px;
+    opacity: .5;
+    transform: scale(.7);
+    animation: cloud4 16s linear 2s infinite;
+}
+
+/* 第四朵云关键帧设置 */
+@keyframes cloud4 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+/* 第五朵云 */
+.sky>.cloud5 {
+    top: 28px;
+    right: -187px;
+    opacity: .8;
+    transform: scale(.8);
+    animation: cloud5 12s linear 2s infinite;
+}
+
+/* 第五朵云关键帧设置 */
+@keyframes cloud5 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
